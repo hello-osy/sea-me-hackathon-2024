@@ -1,0 +1,16 @@
+<launch>
+  <!-- Launch the camera node -->
+  <node name="camera_publisher" pkg="src" type="camera.py" output="screen"/>
+
+  <!-- Launch the IMU node -->
+  <node name="imu_publisher" pkg="src" type="IMU.py" output="screen"/>
+
+  <!-- Launch the LIDAR node -->
+  <node name="rplidar_node" pkg="src" type="LIDAR.py" output="screen"/>
+
+  <!-- Launch the lane detection node -->
+  <node name="road_lane_detector" pkg="src" type="lane_detector.py" output="screen"/>
+
+  <!-- Launch the control node -->
+  <node name="control" pkg="src" type="control.py" output="screen"/>
+</launch>
